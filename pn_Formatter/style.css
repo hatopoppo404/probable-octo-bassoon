@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+/* -----------------
+        font
+-------------------*/
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    text-align: center;
+    color: #1a73e8;
+}
+
+/* 入力エリア */
+#input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+#inputLabel {
+    font-weight: bold;
+    color: #333;
+    line-height: 1.5rem;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    /* 幅にパディングを含める */
+    font-size: 14px;
+    line-height: 2rem;
+    resize: vertical;
+    margin-bottom: 15px;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #1a73e8;
+}
+
+/* ボタン */
+#action-section {
+    margin-top: 50px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #1557b0;
+}
+
+/* 結果表示エリア */
+#output-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+#outputTitle {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+}
+
+.result-box {
+    line-height: 2rem;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    min-height: 100px;
+    white-space: pre-wrap;
+    /* 改行を有効にする */
+    font-family: monospace;
+    /* 品番が見やすいように等幅フォント */
+}

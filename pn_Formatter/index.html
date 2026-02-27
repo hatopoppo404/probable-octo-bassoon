@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PN Formatter</title>
+    <meta content="品目番号を正規表現にします。" name="description">
+    <meta property="og:title" content="品番正規化ツール" />
+    <meta property="og:description" content="品目番号を正規表現にします。" />
+    <meta property="og:type" content="ページの種類" />
+    <meta property="og:url" content="ページの URL" />
+    <meta property="og:image" content="サムネイル画像の URL" />
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:locale" content="ja_JP" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/Group 6.png" type="image/png">
+</head>
+
+<body>
+    <div class="container">
+        <h1>📦 PN Normalizer</h1>
+
+        <section id="input-section">
+            <label for="inputList" id="inputLabel">Input Part Numbers:</label>
+            <textarea id="inputList" placeholder="例: abc-123456-1&#10;1234-ABCD12-12"></textarea>
+        </section>
+
+        <div id="action-section">
+            <button id="runBtn">Run Normalization 🚀</button>
+        </div>
+
+        <section id="output-section">
+            <h2 id="outputTitle">Results</h2>
+            <div id="resultArea" class="result-box"></div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
