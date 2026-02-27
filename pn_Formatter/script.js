@@ -11,7 +11,7 @@ document.getElementById('runBtn').addEventListener('click', () => {
     const resultArea = document.getElementById('resultArea');
     const rawText = inputArea.value;
 
-    // 2. テキストを改行、カンマ、タブ、スペースのどれかで分割
+    // 2. テキストを改行、カンマ、タブ、スペースのどれかで分割　（複数の区切り文字を一度に指定）
     const lines = rawText.split(/[\n\r, \t]+/);
 
     // 3. 正規表現パターンの定義
@@ -60,4 +60,4 @@ document.getElementById('copyAllBtn').addEventListener('click', () => {
     }).catch(err => {
         console.error('コピーに失敗しました', err);
     });
-});
+}); 
