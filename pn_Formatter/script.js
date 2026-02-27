@@ -43,3 +43,21 @@ document.getElementById('runBtn').addEventListener('click', () => {
     resultArea.innerHTML = outputHtml || '変換する品番を入力してください';
     resultArea.style.color = '#d93025'; // 結果エリアを表示
 });
+
+// --- 追加：全件コピーボタンの処理 ---
+document.getElementById('copyAllBtn').addEventListener('click', () => {
+    if (extractedPNs.length === 0) {
+        alert('コピーする品番がありません');
+        return;
+    }
+
+    // 配列の中身を「改行」でつなげて一つの文字列にする
+    const textToCopy = extractedPNs.join('\n');
+
+    // クリップボードに書き込み
+    navigator.clipboard.writeText(textToCopy).then(() => {
+        alert(extractedPNs.length + '件の品番をコピーしました');
+    }).catch(err => {
+        console.error('コピーに失敗しました', err);
+    });
+});
