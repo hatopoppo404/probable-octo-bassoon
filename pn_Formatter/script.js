@@ -4,6 +4,7 @@
 // パターンA: 3桁-6桁-1桁
 // パターンB: 4桁-6桁-2桁
 const regex = /([A-Z0-9]{3}-[A-Z0-9]{6}-[0-9]{1})|([A-Z0-9]{4}-[A-Z0-9]{6}-[0-9]{2})/;
+let extractedPNs = [];
 
 document.getElementById('runBtn').addEventListener('click', () => {
     // 1. 入力値を取得
