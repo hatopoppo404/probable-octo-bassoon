@@ -20,6 +20,7 @@ document.getElementById('runBtn').addEventListener('click', () => {
 
     // 4. 結果を格納する変数（HTMLとして書き出す）
     let outputHtml = '';
+    extractedPNs = [];
 
     lines.forEach((line) => {
         const trimmedLine = line.trim().toUpperCase(); // 前後空白削除 & 大文字化
@@ -32,6 +33,7 @@ document.getElementById('runBtn').addEventListener('click', () => {
         if (found) {
             // found[0] にはマッチした「品番部分」だけが入る
             const cleanPN = found[0];
+            extractedPNs.push(cleanPN); // 配列に保存
             outputHtml += `<div style="color: #1a73e8;">${cleanPN}</div>`;
         } else {
             // 行頭がパターンに合わない（前に余計な文字がある等）場合はエラー
