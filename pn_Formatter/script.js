@@ -24,7 +24,8 @@ document.getElementById('runBtn').addEventListener('click', () => {
     extractedPNs = [];
 
     lines.forEach((line) => {
-        const trimmedLine = line.trim().toUpperCase(); // 前後空白削除 & 大文字化
+
+        const trimmedLine = normalizeText(line);
 
         if (trimmedLine === "") return; // 空行はスルー
 
@@ -63,4 +64,15 @@ document.getElementById('copyAllBtn').addEventListener('click', () => {
     }).catch(err => {
         console.error('コピーに失敗しました', err);
     });
-}); 
+});
+
+const normalizeText = (str) => {
+    return str
+        .replace(/[‐－ー—―]/g, '-')
+        .replace(/[０-９ａ-ｚＡ-Ｚ]/g, (s) => {
+            const halfWidth = String.fromCharCode(s.charCodeAt(0) - 0xfee0);
+            return halfWidth.toUpperCase();
+        })
+        .trim()
+        .toUpperCase();
+};
