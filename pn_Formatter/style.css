@@ -78,13 +78,13 @@ textarea:focus {
     cursor: pointer;
     transition: background 0.3s;
     border: solid 1px #ffffff;
-    box-shadow: 0 0 4px#8d8d8d4e;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 #runBtn:hover {
     background-color: #3e91ff;
     border: solid 1px #ffffff;
-    box-shadow: 0 0 8px#8d8d8d8a;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* 結果表示エリア */
@@ -128,9 +128,9 @@ textarea:focus {
     border: 1px solid #eee;
     cursor: pointer;
     transition: background 0.3s;
-    box-shadow: 0 0 4px#8d8d8d4e;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 #copyAllBtn:hover {
-    box-shadow: 0 0 6px#8d8d8d8a;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
