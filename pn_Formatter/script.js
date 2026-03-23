@@ -5,6 +5,7 @@
 // パターンB: 4桁-6桁-2桁
 const regex = /([A-Z0-9]{3}-[A-Z0-9]{6}-[0-9]{1})|([A-Z0-9]{4}-[A-Z0-9]{6}-[0-9]{2})/;
 let extractedPNs = [];
+const resultSec = document.getElementById('output-section');
 
 document.getElementById('runBtn').addEventListener('click', () => {
     // 1. 入力値を取得
@@ -46,6 +47,8 @@ document.getElementById('runBtn').addEventListener('click', () => {
     // 5. 画面に反映
     resultArea.innerHTML = outputHtml || '変換する品番を入力してください';
     resultArea.style.color = '#d93025'; // 結果エリアを表示
+
+    resultSec.classList.remove("is-close");
 });
 
 // --- 追加：全件コピーボタンの処理 ---
