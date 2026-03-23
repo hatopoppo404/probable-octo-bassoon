@@ -25,7 +25,7 @@ h1 {
     font-size: 1.5rem;
     margin-top: 30px;
     text-align: center;
-    color: #1a73e8;
+    color: #5aa1ff;
 }
 
 /* 入力エリア */
@@ -58,7 +58,7 @@ textarea {
 
 textarea:focus {
     outline: none;
-    border-color: #1a73e8;
+    border-color: #5aa1ff;
 }
 
 /* ボタン */
@@ -69,18 +69,22 @@ textarea:focus {
 #runBtn {
     width: 100%;
     padding: 12px;
-    background-color: #1a73e8;
+    background-color: #5aa1ff;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 9999px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s;
+    border: solid 1px #ffffff;
+    box-shadow: 0 0 4px#8d8d8d4e;
 }
 
 #runBtn:hover {
-    background-color: #1557b0;
+    background-color: #3e91ff;
+    border: solid 1px #ffffff;
+    box-shadow: 0 0 8px#8d8d8d8a;
 }
 
 /* 結果表示エリア */
@@ -118,14 +122,15 @@ textarea:focus {
     background-color: #ffffff;
     color: #8d8d8d;
     border: none;
-    border-radius: 8px;
+    border-radius: 9999px;
     font-size: 12px;
     font-weight: bold;
     border: 1px solid #eee;
     cursor: pointer;
     transition: background 0.3s;
+    box-shadow: 0 0 4px#8d8d8d4e;
 }
 
 #copyAllBtn:hover {
-    background-color: #dedede;
+    box-shadow: 0 0 6px#8d8d8d8a;
 }
